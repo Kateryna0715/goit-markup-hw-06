@@ -200,8 +200,7 @@ img {
   transition: color var(--transition);
 }
 
-.mob-link:hover,
-.mob-link:focus {
+.mobile-current {
   color: var(--ocean);
 }
 
@@ -219,7 +218,7 @@ img {
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  color: var(--body-text);
+  color: var(--primary-brand);
 }
 .mob-email-link {
   font-size: 20px;
@@ -249,17 +248,6 @@ img {
 
 .mob-soc-icon {
   fill: currentColor;
-}
-.mob-soc-link:hover,
-.mob-soc-link:focus {
-  background-color: var(--ocean);
-}
-
-.mob-tel-link:hover,
-.mob-tel-link:focus,
-.mob-email-link:hover,
-.mob-email-link:focus {
-  color: var(--primary-brand);
 }
 
 .header-list,
@@ -348,6 +336,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--dark);
   margin-bottom: 8px;
+  text-align: center;
 }
 
 /* TEAM */
@@ -462,11 +451,6 @@ img {
 .customers-link:focus {
   color: var(--ocean);
   border-color: var(--ocean);
-}
-
-.customers-link:hover .customers-icon,
-.customers-link:focus .customers-icon {
-  fill: var(--ocean);
 }
 
 /* PORTFOLIO */
@@ -931,6 +915,9 @@ img {
   .container {
     width: 768px;
   }
+  .header-container {
+    height: 72px;
+  }
   .mob-menu,
   .open-btn-menu {
     display: none;
@@ -971,7 +958,6 @@ img {
   .header-address {
     font-style: normal;
     margin-left: auto;
-    padding: 16px 0;
   }
 
   .contacts-list {
@@ -980,7 +966,11 @@ img {
     justify-content: right;
     gap: 12px;
   }
-
+  .contacts-item {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+  }
   .contacts-link {
     color: var(--body-text);
     transition: color var(--transition);
@@ -1025,6 +1015,9 @@ img {
   .benefits-item {
     width: calc((100% - 24px) / 2);
   }
+  .benefits-title {
+    text-align: left;
+  }
   .team-div {
     width: 584px;
   }
@@ -1036,6 +1029,9 @@ img {
   }
   .customers-div {
     width: 584px;
+  }
+  .customers-list {
+    gap: 72px 24px;
   }
   .customers-list-item {
     max-width: unset;
@@ -1069,6 +1065,12 @@ img {
     width: 264px;
     padding-left: 16px;
   }
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    height: 100%;
+    overflow: unset;
+  }
 }
 
 /* MEDIA MIN 1158 */
@@ -1082,7 +1084,7 @@ img {
   }
 
   .header-logo-link {
-    margin-right: 259px;
+    margin-right: 76px;
   }
   .header-address {
     margin-left: auto;
@@ -1090,6 +1092,11 @@ img {
   .contacts-list {
     flex-wrap: nowrap;
     gap: 40px;
+  }
+  .contacts-item {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
   }
   .contacts-link {
     padding: 24px 0;
@@ -1102,6 +1109,7 @@ img {
       ),
       url(../images/hero-bg-desktop.jpg);
     padding: 188px 0;
+    max-width: 1440px;
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -1203,13 +1211,6 @@ img {
   .sub-form {
     flex-wrap: nowrap;
   }
-
-  .modal {
-    width: 408px;
-    min-height: 584px;
-    height: 100%;
-    overflow: unset;
-  }
 }
 
 /* MEDIA MAX 1158 */
@@ -1221,7 +1222,6 @@ img {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
-    text-align: center;
   }
   .benefits-text {
     font-weight: 500;
